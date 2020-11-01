@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--white: #fff;
+	--gray: #f3f3ee;
+	--blue: #39ace3;
+	--red: #f7665f;
+	--green: #51e3a4;
+	--darkgray: #747981;
+	--lightgray: #cfd0d5;
+}
+
+body{
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--gray);
+    color: var(--darkgray);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+	padding-bottom: .5rem;
+	margin-bottom: .5rem;
+	border-bottom: 1px solid var(--gray)
+}
+
+button{
+	background-color: var(--red);
+	color: var(--white);
+	padding: 5px 10px;
+	border: none;
+	border-radius: 2px;
+	cursor: pointer;
+	margin-top: 1rem;
+	float: right;
+}
+
+button:disabled{
+	opacity: .5;
+}
+
+main{
+	width: 25%;
+}
+
+div{
+	background-color: var(--white);
+	padding: 2rem;
+}
+
+ul{
+	list-style: none;
+}
+
+li{
+	padding: 10px 0;
+}
+
+input[type=checkbox]{
+	position: absolute;
+	opacity: 0;
+}
+
+label{
+	position: relative;
+	padding: 0;
+	cursor: pointer;
+	display: block;
+}
+
+label:after{
+	content: '';
+	margin-top: 6px;
+	float: right;
+	width: 15px;
+	height: 15px;
+	border-radius: 10px;
+	border: 1px solid var(--lightgray);
+}
+
+input[type=checkbox]:checked + label{
+	text-decoration: line-through;
+	color: var(--lightgray);
+}
+
+input[type=checkbox]:checked + label:before{
+	content: '';
+	position: absolute;
+	right: 4px;
+	top: 11px;
+	height: 4px;
+	width: 8px;
+	border-left: 1px solid var(--green); 
+	border-bottom: 1px solid var(--green);
+	transform: rotate(-40deg);
+}
+
+input[type=checkbox]:checked + label:after{
+	border-color: var(--green);
+}
+
+form{
+	background-color: var(--white);
+	border-top: 1px solid var(--gray);
+}
+
+input[type=text] {
+	color: var(--darkgray);
+	width: 100%;
+	display: block;
+	border: none;
+	border-bottom: 1px solid var(--gray);
+	padding: 1rem 2rem;
+}
+
+input[type=text]:focus{
+	border-color: var(--blue);
+}
